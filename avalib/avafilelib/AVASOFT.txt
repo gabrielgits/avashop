@@ -1,0 +1,11 @@
+Classe para Manipular Arquivos Criado By Chands
+LEIA ESTE ACORDO DE LICENÇA ANTES DE USAR O SOFTWARE OU CODIGO FONTE
+ACORDO DE LICENÇA E TERMOS DE USO DE SISTEMA DA AVASOFT
+Você não pode usar, alugar, arrendar, sub-licenciar, publicar, modificar, adaptar ou traduzir qualquer parte do sistema ou código fonte sem a autorização do autor.
+Você não pode criar quaisquer trabalhos derivados, ou de outra forma tentar criar o código de fonte deste sistema a partir do seu código-objecto. 
+Você não pode usar qualquer trechos de código ou software não autorizado, ilegal, falsificado, ou modificado em ligação com o Software ou código fonte, incluindo o uso de ferramentas para desviar de, incapacitar, ou contornar qualquer mecanismo de codificação, segurança ou autenticação para o sistema; 
+Você não pode obter o Software ou código fonte de qualquer forma que não seja por intermédio dos métodos de distribuição da AVASOFT ou do autor.
+
+O ACESSO AO OU USO DO SOFTWARE OU CODIGO FONTE ESTÁ EXPRESSAMENTE CONDICIONADO À ACEITAÇÃO DOS TERMOS DESTE ACORDO.
+
+Copyright ©2014 AVASoft, Todos os Direitos Reservado.

@@ -1,0 +1,86 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFF58DD1D
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = xFFB53636
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Fill.Gradient.StopPosition.Y = 0.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Brush1: TBrushObject
+    StyleName = 'Brush1'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = claBlack
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.StartPosition.X = 0.500000000000000000
+    Brush.Gradient.StartPosition.Y = 1.000000000000000000
+    Brush.Gradient.StopPosition.X = 0.499999970197677600
+    Brush.Gradient.StopPosition.Y = 0.000000000000000000
+  end
+  object Brush2: TBrushObject
+    StyleName = 'Brush2'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFF58DD1D
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFFB53636
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.StartPosition.X = 0.500000000000000000
+    Brush.Gradient.StartPosition.Y = 1.000000000000000000
+    Brush.Gradient.StopPosition.X = 0.499999970197677600
+    Brush.Gradient.StopPosition.Y = 0.000000000000000000
+  end
+  object Rectangle1: TRectangle
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF58DD1D
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFFB53636
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 369.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Position.X = 144.000000000000000000
+    Position.Y = 160.000000000000000000
+    TabOrder = 3
+    Text = 'Button1'
+  end
+end

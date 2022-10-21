@@ -1,0 +1,178 @@
+object FormGestaoVenda: TFormGestaoVenda
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Inventario'
+  ClientHeight = 463
+  ClientWidth = 640
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StringGridBindSourceDB1: TStringGrid
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 344.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    RowCount = 9
+    RowHeight = 21.000000000000000000
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 319.000000000000000000
+  end
+  object NavigatorBindSourceDB1: TBindNavigator
+    Align = Bottom
+    Position.Y = 344.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DataSource = BindSourceDB1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbCancel, nbRefresh, nbApplyUpdates, nbCancelUpdates]
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object GroupBox1: TGroupBox
+    Align = Bottom
+    Position.Y = 377.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 86.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Invent'#225'rio de Vendas'
+    TabOrder = 7
+    object Button1: TButton
+      Position.X = 136.000000000000000000
+      Position.Y = 48.000000000000000000
+      TabOrder = 0
+      Text = 'Imprimir'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 528.000000000000000000
+      Position.Y = 56.000000000000000000
+      TabOrder = 1
+      Text = 'Imprimir'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 528.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 2
+      Text = 'Imprimir'
+      OnClick = Button3Click
+    end
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        'Janeiro'
+        'Fevereiro'
+        'Mar'#231'o'
+        'Abril'
+        'Maio'
+        'Junho'
+        'Julho'
+        'Agosto'
+        'Setembro'
+        'Outubro'
+        'Novembro'
+        'Dezembro')
+      Position.X = 408.000000000000000000
+      Position.Y = 56.000000000000000000
+      TabOrder = 3
+    end
+    object ComboBox2: TComboBox
+      Items.Strings = (
+        '2016'
+        '2017'
+        '2018'
+        '2019'
+        '2020'
+        '2021'
+        '2022'
+        '2023'
+        '2024'
+        '2025')
+      Position.X = 408.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 4
+    end
+    object DateEdit1: TDateEdit
+      Date = 42832.000000000000000000
+      Position.X = 24.000000000000000000
+      Position.Y = 48.000000000000000000
+      TabOrder = 5
+    end
+    object Label1: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 24.000000000000000000
+      Text = 'Invent'#225'rio Di'#225'rio'
+    end
+    object Label2: TLabel
+      Position.X = 280.000000000000000000
+      Position.Y = 56.000000000000000000
+      Text = 'Invent'#225'rio Mensal'
+    end
+    object Label3: TLabel
+      Position.X = 280.000000000000000000
+      Position.Y = 24.000000000000000000
+      Text = 'Invent'#225'rio Anual'
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryVendaInvetAno
+    ScopeMappings = <>
+    Left = 292
+    Top = 248
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 164
+    Top = 253
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridBindSourceDB1
+      Columns = <
+        item
+          MemberName = 'VENDAID'
+        end
+        item
+          MemberName = 'PRODUTONOME'
+        end
+        item
+          MemberName = 'CATEGORIANOME'
+        end
+        item
+          MemberName = 'PRODUTOPRECO'
+        end
+        item
+          MemberName = 'VENDAQUANTIDADE'
+        end
+        item
+          MemberName = 'VENDADATA'
+        end
+        item
+          MemberName = 'PESSOANOME'
+        end
+        item
+          MemberName = 'TIPOCLIENTENOME'
+        end
+        item
+          MemberName = 'USUARIONOMECOMPLETO'
+        end>
+    end
+    object LinkFillControlToPropertyTagString: TLinkFillControlToProperty
+      Category = 'Quick Bindings'
+      Track = True
+      Control = ComboBox2
+      Component = Button3
+      ComponentProperty = 'TagString'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

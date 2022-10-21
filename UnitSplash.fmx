@@ -1,0 +1,104 @@
+object FormSplash: TFormSplash
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = None
+  Caption = 'Tela de Splash'
+  ClientHeight = 317
+  ClientWidth = 503
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFF005BB0
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = claWhite
+      Offset = 0.850931704044342000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Fill.Gradient.StopPosition.Y = 0.000000000000000000
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFC9C9C9
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Size.Width = 503.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Text1: TText
+      Align = Left
+      Size.Width = 309.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = ' Avashop 0.4 - Lite'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.HorzAlign = Leading
+    end
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Center
+    Enabled = True
+    Size.Width = 97.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Align = Bottom
+    StyledSettings = [Family, Size, Style]
+    Position.Y = 296.000000000000000000
+    Size.Width = 503.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claWhite
+    TextSettings.HorzAlign = Trailing
+    Text = 'Avasoft Copyright '#169' 2017, Todos os Direitos Reservado.'
+  end
+  object Timer1: TTimer
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 56
+    Top = 104
+  end
+  object Text3: TText
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 503.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = '* Loja Demo *'
+    TextSettings.Font.Family = 'Segoe UI Emoji'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.Style = [fsBold]
+    TextSettings.FontColor = claBlueviolet
+    TextSettings.HorzAlign = Trailing
+  end
+  object Label2: TLabel
+    Align = Bottom
+    StyledSettings = []
+    Position.Y = 264.000000000000000000
+    Size.Width = 503.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claLightgray
+    Text = ' Registrado'
+  end
+end

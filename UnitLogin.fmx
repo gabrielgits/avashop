@@ -1,0 +1,103 @@
+object FormLogin: TFormLogin
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Form2'
+  ClientHeight = 345
+  ClientWidth = 493
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = claBlack
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = xFFC4C4C4
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.850103795528411900
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.149896204471588100
+  Fill.Gradient.StopPosition.Y = 0.000000003202160315
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Bottom
+    Fill.Color = xFF6C6C6C
+    Position.Y = 272.000000000000000000
+    Size.Width = 493.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    object Layout1: TLayout
+      Align = Center
+      Size.Width = 344.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Align = Left
+        Size.Width = 80.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Limpar'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Align = Right
+        Position.X = 264.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Voltar'
+        OnClick = Button2Click
+      end
+    end
+  end
+  object EditUserName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 128.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style]
+    Position.X = 128.000000000000000000
+    Position.Y = 88.000000000000000000
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claWhite
+    Text = 'Nome do Usu'#225'rio'
+  end
+  object EditSenha: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    Position.X = 128.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style]
+    Position.X = 128.000000000000000000
+    Position.Y = 152.000000000000000000
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claWhite
+    Text = 'Palavra Passe'
+  end
+  object Button3: TButton
+    Position.X = 288.000000000000000000
+    Position.Y = 176.000000000000000000
+    TabOrder = 2
+    Text = 'Entrar'
+    OnClick = Button3Click
+  end
+end

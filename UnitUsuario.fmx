@@ -1,0 +1,235 @@
+object FormUsuario: TFormUsuario
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Usu'#225'rios'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFF80F54B
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = claWhite
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ButtonNome: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 3
+      Text = 'Novo'
+      OnClick = ButtonNomeClick
+    end
+    object ButtonAlterar: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 2
+      Text = 'Alterar'
+      OnClick = ButtonAlterarClick
+    end
+    object ButtonEliminar: TButton
+      Position.X = 216.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Eliminar'
+      OnClick = ButtonEliminarClick
+    end
+    object Button1: TButton
+      Position.X = 320.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 4
+      Text = 'Actualizar'
+      OnClick = Button1Click
+    end
+  end
+  object Panel3: TPanel
+    Align = Bottom
+    Position.Y = 317.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 24.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nome do Usuario'
+    end
+    object Cancelar: TButton
+      Position.X = 384.000000000000000000
+      Position.Y = 80.000000000000000000
+      TabOrder = 3
+      Text = 'Cancelar'
+      OnClick = CancelarClick
+    end
+    object Salvar: TButton
+      Position.X = 520.000000000000000000
+      Position.Y = 80.000000000000000000
+      TabOrder = 4
+      Text = 'Salvar'
+      OnClick = SalvarClick
+    end
+    object Label2: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'Senha'
+    end
+    object Edit3: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 24.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Position.X = 200.000000000000000000
+      Position.Y = 8.000000000000000000
+      Text = 'Pevilegio'
+    end
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        'Super Admistrador'
+        'Admistrador'
+        'Gerente'
+        'Balconista'
+        'An'#243'nimo'
+        'Pessoa')
+      ItemIndex = 0
+      Position.X = 200.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 10
+      Position.X = 200.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label4: TLabel
+      Position.X = 200.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nome Completo do Usu'#225'rio'
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Left
+    Position.Y = 50.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 267.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnItemClick = ListView1ItemClick
+    SearchVisible = True
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF85F16F
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Text1: TText
+    Size.Width = 665.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Gerenciamento de Usu'#225'rios'
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryUsuario
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListView1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'USUARIONOMECOMPLETO'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'USUARIOID'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'PREVILEGIONOME'
+      Control = ComboBox1
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryPrevilegio
+    ScopeMappings = <>
+    Left = 312
+    Top = 232
+  end
+end

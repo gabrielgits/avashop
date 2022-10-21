@@ -1,0 +1,107 @@
+object FormProcurarProdutos: TFormProcurarProdutos
+  Left = 0
+  Top = 0
+  Caption = 'Consultar Produtos'
+  ClientHeight = 393
+  ClientWidth = 640
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StringGridBindSourceDB1: TStringGrid
+    Align = Bottom
+    Position.Y = 104.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    RowCount = 3
+    RowHeight = 21.000000000000000000
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 264.000000000000000000
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF51B4E9
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Text1: TText
+      Align = Center
+      Size.Width = 470.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Consulte produtos atraves da sua categoria'
+      TextSettings.Font.Family = 'Arial Narrow'
+      TextSettings.Font.Size = 14.000000000000000000
+    end
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 218.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Left
+      TabOrder = 0
+      Size.Width = 169.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 177.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'searchtoolbutton'
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryProcurarProduto
+    ScopeMappings = <>
+    Left = 304
+    Top = 184
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridBindSourceDB1
+      Columns = <
+        item
+          MemberName = 'CATEGORIANOME'
+          Width = 128
+        end
+        item
+          MemberName = 'PRODUTONOME'
+          Width = 256
+        end
+        item
+          MemberName = 'PRODUTOPRECO'
+          Width = 128
+        end>
+    end
+  end
+end

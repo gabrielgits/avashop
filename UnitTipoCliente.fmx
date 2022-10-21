@@ -1,0 +1,168 @@
+object FormTipoCliente: TFormTipoCliente
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio Tipos de Clientes'
+  ClientHeight = 480
+  ClientWidth = 640
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFF7CF54D
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = claWhite
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ButtonNome: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 3
+      Text = 'Novo'
+      OnClick = ButtonNomeClick
+    end
+    object ButtonAlterar: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 2
+      Text = 'Alterar'
+      OnClick = ButtonAlterarClick
+    end
+    object ButtonEliminar: TButton
+      Position.X = 216.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Eliminar'
+      OnClick = ButtonEliminarClick
+    end
+    object Button1: TButton
+      Position.X = 312.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 4
+      Text = 'Alterar'
+      OnClick = Button1Click
+    end
+  end
+  object Panel3: TPanel
+    Align = Bottom
+    Position.Y = 374.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 24.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Tipo de Cliente'
+    end
+    object Cancelar: TButton
+      Position.X = 448.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 3
+      Text = 'Cancelar'
+      OnClick = CancelarClick
+    end
+    object Salvar: TButton
+      Position.X = 552.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 4
+      Text = 'Salvar'
+      OnClick = SalvarClick
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    ItemIndex = 0
+    Align = Left
+    Position.Y = 50.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 324.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnItemClick = ListView1ItemClick
+    SearchVisible = True
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF72F26E
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Text1: TText
+    Position.X = -56.000000000000000000
+    Size.Width = 777.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Gerenciamento de Tipo de Cliente'
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryTipoCliente
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'TIPOCLIENTENOME'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'TIPOCLIENTEID'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

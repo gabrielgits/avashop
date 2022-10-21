@@ -1,0 +1,223 @@
+object FormVenda: TFormVenda
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Venda'
+  ClientHeight = 480
+  ClientWidth = 676
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 676.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Text1: TText
+      Align = Client
+      Size.Width = 676.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Vendas'
+      TextSettings.Font.Size = 18.000000000000000000
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 676.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ButtonNome: TButton
+      Position.X = 56.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Finalizar Venda'
+      OnClick = ButtonNomeClick
+    end
+    object ButtonAlterar: TButton
+      Position.X = 224.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Cancelar Venda'
+      OnClick = ButtonAlterarClick
+    end
+    object ButtonImprimir: TButton
+      Position.X = 520.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Fechar'
+      OnClick = ButtonImprimirClick
+    end
+  end
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 634.000000000000000000
+    Size.Height = 318.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object GroupBox1: TGroupBox
+      Align = Right
+      Position.X = 345.000000000000000000
+      Size.Width = 289.000000000000000000
+      Size.Height = 318.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nova Compra'
+      TabOrder = 0
+      object Button1: TButton
+        Position.X = 192.000000000000000000
+        Position.Y = 32.000000000000000000
+        TabOrder = 1
+        Text = 'Produto'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 192.000000000000000000
+        Position.Y = 115.000000000000000000
+        TabOrder = 2
+        Text = 'Cliente'
+        OnClick = Button2Click
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 16.000000000000000000
+        Position.Y = 64.000000000000000000
+        Enabled = False
+        Size.Width = 257.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Position.X = 16.000000000000000000
+        Position.Y = 147.000000000000000000
+        Enabled = False
+        Size.Width = 257.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button3: TButton
+        Position.X = 16.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Adicionar ao Carrinho'
+        OnClick = Button3Click
+      end
+      object Label1: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'ID Cliente'
+      end
+      object Label2: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 168.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Pre'#231'o do Produto'
+      end
+      object Label3: TLabel
+        Position.X = 16.000000000000000000
+        Position.Y = 208.000000000000000000
+        Text = 'Quantidade'
+      end
+      object EditQuant: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 9
+        Position.X = 16.000000000000000000
+        Position.Y = 232.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Button4: TButton
+        Position.X = 192.000000000000000000
+        Position.Y = 272.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        Text = 'Actualizar'
+        OnClick = Button4Click
+      end
+    end
+    object GroupBox2: TGroupBox
+      Align = Left
+      Size.Width = 337.000000000000000000
+      Size.Height = 318.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Carrinho de Compra'
+      TabOrder = 1
+      object StringGridBindSourceDB1: TStringGrid
+        Align = Center
+        Size.Width = 310.000000000000000000
+        Size.Height = 283.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowCount = 0
+        RowHeight = 21.000000000000000000
+        Viewport.Width = 306.000000000000000000
+        Viewport.Height = 242.000000000000000000
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryVendaTemp
+    ScopeMappings = <>
+    Left = 72
+    Top = 16
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridBindSourceDB1
+      Columns = <
+        item
+          MemberName = 'VENDATEMPID'
+        end
+        item
+          MemberName = 'PRODUTONOME'
+        end
+        item
+          MemberName = 'CATEGORIANOME'
+        end
+        item
+          MemberName = 'PRODUTOPRECO'
+        end
+        item
+          MemberName = 'VENDAQUANTIDADE'
+        end
+        item
+          MemberName = 'PRODUTOPRECOTOTAL'
+        end
+        item
+          MemberName = 'PRODUTOID'
+          Visible = False
+        end>
+    end
+  end
+end

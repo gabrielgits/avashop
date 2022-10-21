@@ -1,0 +1,209 @@
+object FormCategoria: TFormCategoria
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Categoria'
+  ClientHeight = 410
+  ClientWidth = 661
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFFB8FBA3
+      Offset = 0.006211180239915848
+    end
+    item
+      Color = claWhite
+      Offset = 1.000000000000000000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 360.000000000000000000
+    Size.Width = 661.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ButtonNome: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 3
+      Text = 'Novo'
+      OnClick = ButtonNomeClick
+    end
+    object ButtonAlterar: TButton
+      Position.X = 120.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 2
+      Text = 'Alterar'
+      OnClick = ButtonAlterarClick
+    end
+    object ButtonEliminar: TButton
+      Position.X = 216.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Eliminar'
+      OnClick = ButtonEliminarClick
+    end
+    object Button1: TButton
+      Position.X = 312.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 4
+      Text = 'Actulizar'
+      OnClick = Button1Click
+    end
+  end
+  object Panel3: TPanel
+    Align = Bottom
+    Position.Y = 304.000000000000000000
+    Size.Width = 661.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 24.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nome da Categoria'
+    end
+    object Cancelar: TButton
+      Position.X = 448.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 3
+      Text = 'Cancelar'
+      OnClick = CancelarClick
+    end
+    object Salvar: TButton
+      Position.X = 552.000000000000000000
+      Position.Y = 24.000000000000000000
+      TabOrder = 4
+      Text = 'Salvar'
+      OnClick = SalvarClick
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Left
+    Position.Y = 57.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 247.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    OnItemClick = ListView1ItemClick
+    SearchVisible = True
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFB7F69C
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 0.993788838386535600
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Size.Width = 661.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFFFFEFC4
+    object Text1: TText
+      Position.X = -16.000000000000000000
+      Size.Width = 689.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Gereciamento de Categoria'
+    end
+  end
+  object Brush1: TBrushObject
+    StyleName = 'Brush1'
+    Brush.Color = xFFFFEFC4
+  end
+  object Brush2: TBrushObject
+    StyleName = 'Brush2'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFB7F69C
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = claWhite
+        Offset = 0.993788838386535600
+      end>
+    Brush.Gradient.StartPosition.X = 0.500000000000000000
+    Brush.Gradient.StartPosition.Y = 1.000000000000000000
+    Brush.Gradient.StopPosition.X = 0.499999970197677600
+    Brush.Gradient.StopPosition.Y = 0.000000000000000000
+  end
+  object TBrushObject
+    StyleName = 'cor form'
+  end
+  object Brush3: TBrushObject
+    StyleName = 'Brush3'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFB8FBA3
+        Offset = 0.006211180239915848
+      end
+      item
+        Color = claWhite
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.StartPosition.X = 0.500000000000000000
+    Brush.Gradient.StopPosition.X = 0.499999970197677600
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryCategorias
+    ScopeMappings = <>
+    Left = 96
+    Top = 16
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListView1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'CATEGORIANOME'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'CATEGORIAID'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

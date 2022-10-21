@@ -1,0 +1,157 @@
+object FormPessoa: TFormPessoa
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Pessoa'
+  ClientHeight = 366
+  ClientWidth = 466
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 466.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Text1: TText
+      Align = Client
+      Size.Width = 466.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Gereciamento de Pessoa'
+    end
+  end
+  object Panel3: TPanel
+    Align = Client
+    Size.Width = 466.000000000000000000
+    Size.Height = 301.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 16.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Nome Completo'
+    end
+    object Cancelar: TButton
+      Position.X = 256.000000000000000000
+      Position.Y = 264.000000000000000000
+      TabOrder = 8
+      Text = 'Cancelar'
+      OnClick = CancelarClick
+    end
+    object Salvar: TButton
+      Position.X = 360.000000000000000000
+      Position.Y = 264.000000000000000000
+      TabOrder = 7
+      Text = 'Salvar'
+      OnClick = SalvarClick
+    end
+    object Label2: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'Contacto'
+    end
+    object Edit3: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 16.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 120.000000000000000000
+      Text = 'Morada'
+    end
+    object Edit4: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 16.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label4: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 176.000000000000000000
+      Text = 'N'#186' BI'
+    end
+    object Edit5: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 16.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label5: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 232.000000000000000000
+      Text = 'Data'
+    end
+    object DateEdit1: TDateEdit
+      Date = 42804.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 256.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Position.X = 256.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 153.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button1: TButton
+      Position.X = 256.000000000000000000
+      Position.Y = 176.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Carregar Fotografia'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Enabled = False
+      Position.X = 256.000000000000000000
+      Position.Y = 208.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Capturar Fotografia'
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = '|*.png||*.jpg||*.jpeg||*.bmp'
+    Left = 288
+    Top = 305
+  end
+end

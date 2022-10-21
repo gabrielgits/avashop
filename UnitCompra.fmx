@@ -1,0 +1,248 @@
+object FormCompra: TFormCompra
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = Single
+  Caption = 'Formul'#225'rio de Compra'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 430.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ButtonNome: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 3
+      Text = 'Novo'
+      OnClick = ButtonNomeClick
+    end
+    object ButtonAlterar: TButton
+      Enabled = False
+      Position.X = 120.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 2
+      Text = 'Alterar'
+      OnClick = ButtonAlterarClick
+    end
+    object ButtonEliminar: TButton
+      Enabled = False
+      Position.X = 216.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 1
+      Text = 'Eliminar'
+      OnClick = ButtonEliminarClick
+    end
+    object Button1: TButton
+      Position.X = 312.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 4
+      Text = 'Atualizar'
+      OnClick = Button1Click
+    end
+  end
+  object Panel3: TPanel
+    Align = Bottom
+    Position.Y = 309.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 121.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnClick = Panel3Click
+    object Cancelar: TButton
+      Position.X = 448.000000000000000000
+      Position.Y = 32.000000000000000000
+      TabOrder = 2
+      Text = 'Cancelar'
+      OnClick = CancelarClick
+    end
+    object Salvar: TButton
+      Position.X = 544.000000000000000000
+      Position.Y = 32.000000000000000000
+      TabOrder = 3
+      Text = 'Salvar'
+      OnClick = SalvarClick
+    end
+    object Quantidade: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Quantidade'
+    end
+    object Edit2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 7
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Position.X = 200.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Fornecedor'
+    end
+    object ComboBox2: TComboBox
+      Items.Strings = (
+        'Fornecedor 1'
+        'Fornecedor 2')
+      ItemIndex = 0
+      Position.X = 200.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'Produto'
+    end
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        'Produto 1'
+        'Produto 2'
+        'Produto 3')
+      ItemIndex = 0
+      Position.X = 8.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 11
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 12
+      Position.X = 200.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label2: TLabel
+      Position.X = 200.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'Pre'#231'o '
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+    ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Left
+    Position.Y = 50.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 259.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnItemClick = ListView1ItemClick
+    SearchVisible = True
+  end
+  object Rectangle1: TRectangle
+    Align = Center
+    Size.Width = 337.000000000000000000
+    Size.Height = 250.000000000000000000
+    Size.PlatformDefault = False
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      StyledSettings = [Family, Style, FontColor]
+      TextSettings.Font.Size = 14.000000000000000000
+      Align = Center
+      Size.Width = 321.000000000000000000
+      Size.Height = 197.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 317.000000000000000000
+      Viewport.Height = 193.000000000000000000
+    end
+    object Label8: TLabel
+      Position.X = 120.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Informa'#231#245'es da Compra'
+    end
+  end
+  object Rectangle2: TRectangle
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Text1: TText
+    Position.X = -32.000000000000000000
+    Position.Y = -8.000000000000000000
+    Size.Width = 673.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Gerenciamento de Compra'
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryCompra
+    ScopeMappings = <>
+    Left = 104
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'FORNECEDORNOME'
+      Control = ComboBox2
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'PRODUTONOME'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'COMPRAID'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField3: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      FieldName = 'PRODUTONOME'
+      Control = ComboBox1
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryFornecedor
+    ScopeMappings = <>
+    Left = 200
+    Top = 8
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModuleDB.FDQueryProduto
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+end

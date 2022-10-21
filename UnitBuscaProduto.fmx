@@ -1,0 +1,128 @@
+object FormBuscaProduto: TFormBuscaProduto
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Panel1: TPanel
+    Align = Top
+    Position.Y = 49.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 72.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ComboBox1: TComboBox
+      Position.X = 8.000000000000000000
+      Position.Y = 34.000000000000000000
+      Size.Width = 201.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 9.000000000000000000
+      Text = 'Filtrar por categoria'
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 224.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label2: TLabel
+      Position.X = 224.000000000000000000
+      Position.Y = 8.000000000000000000
+      Text = 'Pesquisar nome'
+    end
+    object Button3: TButton
+      Position.X = 520.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Limpar Filtros'
+    end
+  end
+  object Button1: TButton
+    Position.X = 416.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'searchtoolbutton'
+    TabOrder = 2
+    Text = 'Button1'
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 424.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Button2: TButton
+      Align = Center
+      Size.Width = 89.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Selecionar'
+    end
+  end
+  object StringGridBindSourceDB1: TStringGrid
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 303.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    RowCount = 5
+    RowHeight = 21.000000000000000000
+    OnSelectCell = StringGridBindSourceDB1SelectCell
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 278.000000000000000000
+  end
+  object BindSourceDB1: TBindSourceDB
+    ScopeMappings = <>
+    Left = 112
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGridBindSourceDB1
+      Columns = <
+        item
+          MemberName = 'PRODUTOID'
+        end
+        item
+          MemberName = 'PRODUTONOME'
+        end
+        item
+          MemberName = 'PRODUTOPRECO'
+        end
+        item
+          MemberName = 'CATEGORIANOME'
+        end>
+    end
+  end
+end

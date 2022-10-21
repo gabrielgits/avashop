@@ -1,0 +1,150 @@
+object CameraComponentForm: TCameraComponentForm
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = None
+  Caption = 'Avacam 0.2'
+  ClientHeight = 579
+  ClientWidth = 597
+  Fill.Color = xFF595779
+  Fill.Kind = Solid
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object CameraComponent: TCameraComponent
+    OnSampleBufferReady = CameraComponentSampleBufferReady
+    Left = 360
+    Top = 320
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFF1D6CDC
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFF5D5E8B
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFF85ABE3
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StartPosition.X = 0.500000000000000000
+    Fill.Gradient.StartPosition.Y = 1.000000000000000000
+    Fill.Gradient.StopPosition.X = 0.499999970197677600
+    Fill.Gradient.StopPosition.Y = 0.000000000000000000
+    Size.Width = 597.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    object Button1: TButton
+      Align = Right
+      Position.X = 517.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'cleareditbutton'
+      TabOrder = 0
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+    object Text1: TText
+      Align = Left
+      Size.Width = 241.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Avacam 0.2 By Chands'
+      TextSettings.Font.Family = 'Corbel'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.FontColor = claAliceblue
+    end
+  end
+  object cbResolutions: TComboBox
+    Align = Top
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 3.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 86.000000000000000000
+    Size.Width = 591.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    OnChange = cbResolutionsChange
+  end
+  object imgCameraView: TImage
+    MultiResBitmap = <
+      item
+      end
+      item
+        Scale = 2.000000000000000000
+      end>
+    Align = Client
+    Size.Width = 597.000000000000000000
+    Size.Height = 410.000000000000000000
+    Size.PlatformDefault = False
+    object Label1: TLabel
+      Align = Bottom
+      StyledSettings = [Family, Size, Style]
+      Position.Y = 367.000000000000000000
+      Size.Width = 597.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claGold
+      TextSettings.HorzAlign = Center
+      Text = 
+        'Avasoft Copyright '#169' 2017, Todos os Direitos Reservado. www.avaso' +
+        'ft.ga'
+    end
+  end
+  object lblCameraResolution: TLabel
+    Align = Top
+    StyledSettings = [Family, Size, Style]
+    Position.Y = 50.000000000000000000
+    Size.Width = 597.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxitemlabel'
+    TextSettings.FontColor = claLightskyblue
+    Text = 'Qualidade da Foto'
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Fotografia|*.png'
+    Left = 480
+    Top = 280
+  end
+  object Layout1: TLayout
+    Align = Bottom
+    Position.Y = 529.000000000000000000
+    Size.Width = 597.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object btnStartCamera: TButton
+      Hint = 'Capturar e guadar uma fotografia'
+      Align = Center
+      Cursor = crHandPoint
+      StyledSettings = []
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Size.Width = 139.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Capturar'
+      TextSettings.Font.Family = 'Segoe UI Semibold'
+      TextSettings.Font.Style = [fsBold]
+      TextSettings.FontColor = claNavy
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnStartCameraClick
+    end
+  end
+end
